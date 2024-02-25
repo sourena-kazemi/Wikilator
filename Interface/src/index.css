@@ -4,4 +4,14 @@
 @tailwind utilities;
 * {
   font-family: "Comfortaa", sans-serif;
+  color: #1f1e27;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+#root {
+  position: relative;
+  overflow: hidden;
 }
