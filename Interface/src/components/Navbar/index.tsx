@@ -1,4 +1,9 @@
+import Link from "../Link"
+import PageContext from "../../contexts/PageContext"
+import { useContext } from "react"
+import { PageContextType } from "../../@types/context"
 function Navbar({ state }: { state: "HomePage" | "TranslatePage" }) {
+  const { page } = useContext(PageContext) as PageContextType
   return (
     <nav className="flex justify-between px-4 items-center pt-6 font-bold md:text-lg lg:px-6 lg:pt-8">
       <div className="flex items-center">
@@ -17,10 +22,14 @@ function Navbar({ state }: { state: "HomePage" | "TranslatePage" }) {
         >
           GitHub
         </a>
-        {state === "HomePage" ? (
-          <a className="underline cursor-pointer">Translate</a>
+        {page === "home" ? (
+          <Link className="underline cursor-pointer" page="translate">
+            Translate
+          </Link>
         ) : (
-          <a className="cursor-pointer">Home</a>
+          <Link page="home" className="cursor-pointer">
+            Home
+          </Link>
         )}
       </div>
     </nav>
