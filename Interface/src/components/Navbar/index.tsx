@@ -2,7 +2,7 @@ import Link from "../Link"
 import PageContext from "../../contexts/PageContext"
 import { useContext } from "react"
 import { PageContextType } from "../../@types/context"
-function Navbar({ state }: { state: "HomePage" | "TranslatePage" }) {
+function Navbar() {
   const { page } = useContext(PageContext) as PageContextType
   return (
     <nav className="flex justify-between px-4 items-center pt-6 font-bold md:text-lg lg:px-6 lg:pt-8">

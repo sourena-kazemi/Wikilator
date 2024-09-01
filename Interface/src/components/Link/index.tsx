@@ -10,11 +10,7 @@ function Link({ page, children, className }: LinkProps) {
   return (
     <PageContext.Consumer>
       {(context) => (
-        <a
-          href="#"
-          onClick={() => context?.setPage(page)}
-          className={className}
-        >
+        <a onClick={() => context?.setPage(page)} className={className}>
           {children}
         </a>
       )}

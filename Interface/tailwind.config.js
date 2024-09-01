@@ -4,6 +4,7 @@ export default {
   theme: {
     colors: {
       white: "#ffffff",
+      black: "#1f1e27",
       purple: "#5A43E3",
     },
   },
